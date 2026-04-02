@@ -27,3 +27,12 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# 忽略 IDEA 的配置文件
+.idea/
+
+# 忽略模块文件
+*.iml
+
+# 忽略本地历史
+.history/
