@@ -8,10 +8,16 @@ import java.sql.*;
 public class DBUtil {
 
 //Class.forName("com.mysql.jdbc.Driver");
-//private static final String url = "jdbc:mysql://127.0.0.1:3306/tranditional";
-private static final String url = "jdbc:mysql://127.0.0.1:3306/traditional?useSSL=false&serverTimezone=Asia/Shanghai";
-private static final String user="root";
-private static final String password="159357";
+// ==================== 数据库配置区域 (请根据实际环境修改) ====================
+// 这里的 url 格式为：jdbc:mysql://主机地址:端口/数据库名?参数
+private static final String url = "jdbc:mysql://localhost:3306/YOUR_DATABASE_NAME?useSSL=false&serverTimezone=UTC&characterEncoding=utf8";
+// 数据库用户名
+private static final String user = "YOUR_USERNAME";
+    
+// 数据库密码
+private static final String password = "YOUR_PASSWORD";
+    
+// MySQL 驱动类 (MySQL 8.x 使用 com.mysql.cj.jdbc.Driver)    
 //private static final String driver="com.mysql.jdbc.Driver";
 private static final String driver = "com.mysql.cj.jdbc.Driver"; // MySQL 8.x
     static {
