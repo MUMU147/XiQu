@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>商城首页</title>
+  <link rel="stylesheet" th:href="@{/view/foreground/css/222.css}">
+  <link rel="stylesheet" th:href="@{/view/foreground/css/reset_zl_2021519.css}">
+</head>
+
+<body>
+  <!--头部-->
+  <div class="header">
+    <div class="shortcut">
+      <h5 class="left">中国戏曲网站</h5>
+      <div class="right">
+        <a href="/HomeServlet/view/foreground/fapiao.html">账户</a>
+        <a href=""> <img src="view/foreground/images/dan.jpg" alt=""></a>
+        <a th:href="@{/forget}">退出登录</a>
+        <a th:href="@{/mycollect}">收藏</a>
+        <a href="">购物车</a>
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="http://localhost:8080/HomeServlet/sindex">首页</a></li>
+        <li><a th:href="@{/pshow}">文创</a></li>
+        <li><a href="">演出购票</a></li>
+        <li><a href="">资讯动态</a></li>
+        <li><a href="http://localhost:8080/HomeServlet/regemail">登录 | 注册</a></li>
+        <li>
+          <a href="">联系我们</a>
+        </li>
+      </ul>
+      <img src="view/foreground/images/center.png" alt="">
+    </div>
+    <div class="banner">
+      <img src="view/foreground/images/banner1.png" alt="">
+      <a href="" class="buy">现在购买</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="wenchuang">
+      <h2>春节畅销</h2>
+      <div class="tab">
+        <div class="tab_list">
+            <ul>
+              <li class="current" name="shipin" value="饰">装饰品系列</li>
+              <li name="nianhuo" value="年">年货系列</li>
+              <li name="wenju" value="文具">文具系列</li>
+            </ul>
+        </div>
+      </div>
+      <div class="tab_con">
+        <div class="item" style="display: block">
+            <ul>
+              <li>
+                <img src="view/foreground/images/spic01.png"  alt="">
+                <span class="pname left"><a href="">京剧娃娃摆件</a></span>
+                <span class="oldprice left">210</span>
+                <span class="newprice right">105</span>
+              </li>
+              <li>
+                <img src="view/foreground/images/spic01.png"  alt="">
+                <span class="pname left"><a href="">京剧娃娃摆件</a></span>
+                <span class="oldprice left">210</span>
+                <span class="newprice right">105</span>
+              </li>
+              <li>
+                <img src="view/foreground/images/spic01.png"  alt="">
+                <span class="pname left"><a href="">京剧娃娃摆件</a></span>
+                <span class="oldprice left">210</span>
+                <span class="newprice right">105</span>
+              </li><li>
+              <img src="view/foreground/images/spic01.png"  alt="">
+              <span class="pname left"><a href="">京剧娃娃摆件</a></span>
+              <span class="oldprice left">210</span>
+              <span class="newprice right">105</span>
+            </li>
+            </ul>
+        </div>
+        <div class="item">
+          <ul>
+            <li>
+              <img src="view/foreground/images/spic02.png" alt="">
+              <span class="pname left"><a href="">京剧娃娃摆件</a></span>
+              <span class="oldprice left">210</span>
+              <span class="newprice right">105</span>
+            </li>
+            <li>
+              <img src="view/foreground/images/spic01.png"  alt="">
+              <span class="pname left"><a href="">京剧娃娃摆件</a></span>
+              <span class="oldprice left">210</span>
+              <span class="newprice right">105</span>
+            </li>
+            <li>
+              <img src="view/foreground/images/spic04.png"  alt="">
+              <span class="pname left">京剧娃娃摆件</span>
+              <span class="oldprice left">210</span>
+              <span class="newprice right">105</span>
+            </li><li>
+            <img src="view/foreground/images/spic01.png"  alt="">
+            <span class="pname left">京剧娃娃摆件</span>
+            <span class="oldprice left">210</span>
+            <span class="newprice right">105</span>
+          </li>
+          </ul>
+        </div>
+        <div class="item">
+          <ul>
+            <li>
+              <img src="view/foreground/images/spic03.png"  alt="">
+              <span class="pname left">京剧娃娃摆件</span>
+              <span class="oldprice left">210</span>
+              <span class="newprice right">105</span>
+            </li>
+            <li>
+              <img src="view/foreground/images/spic01.png"  alt="">
+              <span class="pname left">京剧娃娃摆件</span>
+              <span class="oldprice left">210</span>
+              <span class="newprice right">105</span>
+            </li>
+            <li>
+              <img src="view/foreground/images/spic03.png"  alt="">
+              <span class="pname left">京剧娃娃摆件</span>
+              <span class="oldprice left">210</span>
+              <span class="newprice right">105</span>
+            </li><li>
+            <img src="view/foreground/images/spic01.png"  alt="">
+            <span class="pname left">京剧娃娃摆件</span>
+            <span class="oldprice left">210</span>
+            <span class="newprice right">105</span>
+          </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="xiqus">
+      <h2>特色文创</h2>
+      <div class="tab">
+        <div class="tab_list">
+            <ul>
+              <li class="current">饰品系列</li>
+              <li>文具系列</li>
+              <li>香薰系列</li>
+            </ul>
+        </div>
+      </div>
+      <div class="tab_con">
+        <div class="item" style="display: block;">
+            <ul>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134449.jpg" alt="">
+                <h4>伍劲</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134449.jpg" alt="">
+                <h4>伍劲</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134449.jpg" alt="">
+                <h4>伍劲</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134449.jpg" alt="">
+                <h4>伍劲</h4>
+              </li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134905.jpg" alt="">
+                <h4>劲</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134905.jpg" alt="">
+                <h4>劲</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134905.jpg" alt="">
+                <h4>劲</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_134905.jpg" alt="">
+                <h4>劲</h4>
+              </li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_142548.jpg" alt="">
+                <h4>伍</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_142548.jpg" alt="">
+                <h4>伍</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_142548.jpg" alt="">
+                <h4>伍</h4>
+              </li>
+              <li>
+                <img src="view/foreground/images/IMG_20231207_142548.jpg" alt="">
+                <h4>伍</h4>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="xiqu">
+      <h2>最热剧场</h2>
+      <div class="tab">
+        <div class="tab_list">
+            <ul>
+              <li class="current">京剧</li>
+              <li>黄梅戏</li>
+              <li>评剧</li>
+            </ul>
+        </div>
+      </div>
+      <div class="tab_con">
+        <div class="item" style="display: block">
+          <div class="contents">
+            <!--图片轮转-->
+            <div class="poster_box">
+              <div class="caroursel poster-main" data-setting='{
+           "width":1060,
+          "height":300,
+          "posterWidth":543,
+          "posterHeight":297,
+          "scale":0.85,
+          "speed": 500,
+          "autoPlay":true,
+          "delay":2000,
+          "verticalAlign":"middle"
+                  }'>
+                <div class="poster-btn poster-prev-btn"></div>
+                <ul class="poster-list">
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img src="view/foreground/images/IMG_20231207_142528.jpg"></a> <span class="poster-item-title">图片轮转标题1</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/banner1.png"></a> <span class="poster-item-title">图片轮转标题2</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/IMG_20231207_142548.jpg"></a> <span class="poster-item-title">图片轮转标题3</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/spic01.png"></a> <span class="poster-item-title">图片轮转标题4</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/spic01.png"></a> <span class="poster-item-title">图片轮转标题5</span> </div>
+                  </li>
+                </ul>
+                <ul class="lunbo_btn">
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                </ul>
+                <div class="poster-btn poster-next-btn"></div>
+              </div>
+              <!--pc 图片轮转  end-->
+
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="contents">
+            <!--图片轮转-->
+            <div class="poster_box">
+              <div class="caroursel poster-main" data-setting='{
+           "width":1060,
+          "height":300,
+          "posterWidth":543,
+          "posterHeight":297,
+          "scale":0.85,
+          "speed": 500,
+          "autoPlay":true,
+          "delay":2000,
+          "verticalAlign":"middle"
+                  }'>
+                <div class="poster-btn poster-prev-btn"></div>
+                <ul class="poster-list">
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img src="view/foreground/images/IMG_20231207_142528.jpg"></a> <span class="poster-item-title">图片轮转标题1</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/banner1.png"></a> <span class="poster-item-title">图片轮转标题2</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/IMG_20231207_142548.jpg"></a> <span class="poster-item-title">图片轮转标题3</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/spic01.png"></a> <span class="poster-item-title">图片轮转标题4</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/spic01.png"></a> <span class="poster-item-title">图片轮转标题5</span> </div>
+                  </li>
+                </ul>
+                <ul class="lunbo_btn">
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                </ul>
+                <div class="poster-btn poster-next-btn"></div>
+              </div>
+              <!--pc 图片轮转  end-->
+
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="contents">
+            <!--图片轮转-->
+            <div class="poster_box">
+              <div class="caroursel poster-main" data-setting='{
+           "width":1060,
+          "height":300,
+          "posterWidth":543,
+          "posterHeight":297,
+          "scale":0.85,
+          "speed": 500,
+          "autoPlay":true,
+          "delay":2000,
+          "verticalAlign":"middle"
+                  }'>
+                <div class="poster-btn poster-prev-btn"></div>
+                <ul class="poster-list">
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img src="view/foreground/images/IMG_20231207_142528.jpg"></a> <span class="poster-item-title">图片轮转标题1</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/banner1.png"></a> <span class="poster-item-title">图片轮转标题2</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/IMG_20231207_142548.jpg"></a> <span class="poster-item-title">图片轮转标题3</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/spic01.png"></a> <span class="poster-item-title">图片轮转标题4</span> </div>
+                  </li>
+                  <li class="poster-item">
+                    <div class="item"> <a href="#"><img class="tabImg" src="view/foreground/images/spic01.png"></a> <span class="poster-item-title">图片轮转标题5</span> </div>
+                  </li>
+                </ul>
+                <ul class="lunbo_btn">
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                  <li class="tabBtn"></li>
+                </ul>
+                <div class="poster-btn poster-next-btn"></div>
+              </div>
+              <!--pc 图片轮转  end-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 版权 -->
+  <div class="footer">
+    <ul>
+      <li class="left">
+        <a href="">网站地图</a>&nbsp;&nbsp;&nbsp;|
+      </li>
+      <li class="left">
+        <a href="">关于我们</a>&nbsp;&nbsp;&nbsp;|
+      </li>
+      <li class="left">
+        <a href="">联系我们</a>&nbsp;&nbsp;&nbsp;|
+      </li>
+      <li class="left">
+        <a href="">版权声明</a>
+      </li>
+    </ul>
+    <p>主管：中华人民共和国文化和旅游部 | 主办：中国艺术研究院 · 中国非物质文化遗产保护中心</p>
+    <p>Copyright © 2018 中国非物质文化遗产网·中国非物质文化遗产数字博物馆. All Rights Reserved &nbsp;&nbsp;|
+      &nbsp;&nbsp;京ICP备07504941号-3&nbsp;&nbsp; | &nbsp;&nbsp;京公安网备
+      11010502042400</p>
+    <p>建议使用360极速、Chrome、Firefox浏览器，最佳分辨率1920×1080</p>
+  </div>
+
+</body>
+<script th:src="@{/view/foreground/js/222.js}"></script>
+<script th:src="@{/view/foreground/js/jquery-1.10.2.js}"></script>
+<script th:src="@{/view/foreground/js/jquery.carousel-zl-fb.js}"></script><!-- 首页切换 -->
+<script>Caroursel.init($('.caroursel'))</script>
+</html>

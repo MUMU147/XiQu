@@ -1,0 +1,113 @@
+/*===== 谷歌字体 =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --nav-width: 140px;
+
+  /* 自定义颜色 */
+  --first-color: rgb(121, 20, 20, 0.95);
+  /* 导航栏的颜色 */
+  --bg-color: #ffffffc8;
+  
+
+  --sub-color: #7ceefb;
+  --white-color: #727272;
+
+  /* 规定下字体 */
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 1rem;
+  --smal-font-size: 0.875rem;
+
+  /* 设置一下z-index级别 */
+  --z-fixed: 100;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 2rem 0 0 6.75rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: 0.1s;
+  background-color: var(--bg-color);  
+  backdrop-filter: blur(var(--blur-amount));  
+}
+
+
+.l-navbar {
+  position: fixed;
+  top: 0;
+  right: -150px;
+  width: var(--nav-width);
+  /* 100%的窗口高度 */
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  padding: 1.5rem 1.5rem 2rem;
+  /* padding: 1.5rem 1,5rem 2rem; */
+  transition: 1s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 溢出隐藏 */
+  overflow: hidden;
+}
+
+/* 也是让字不折叠的 */
+.nav_brand {
+  /* display: grid; */
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.nav_toggle {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  /* 鼠标放上变小手 */
+  cursor: pointer;
+}
+
+
+
+
+/* 能让东西不被折叠的 */
+.nav_link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0.75rem;
+  color: var(--white-color);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  transition: .1s;
+  cursor: pointer;
+}
+
+
+
+
+.expander {
+  width: calc(var(--nav-width) + 27rem);
+}
+
+
+
+
+
+
+
+

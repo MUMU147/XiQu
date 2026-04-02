@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" th:href="@{/view/admin/css/login.css}">
+</head>
+<body>
+<div id="ddiv"></div>
+<form id="form" action="/HomeServlet/adminlogin" method="post">
+    <table >
+        <tr>
+            <td height="50px">
+                <label for="accountnumber" style="font-size: large;">账 号&nbsp;&nbsp;&nbsp;</label>
+            </td>
+            <td>
+                <input type="text" placeholder="请 输 入 账 号" id="accountnumber" name="username" th:value="${username}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password" style="font-size: large;" >密 码&nbsp;&nbsp;&nbsp;</label>
+            </td>
+            <!-- <td>
+                <input type="password" placeholder="请 输 入 密 码" id="password">
+            </td> -->
+            <td class="box">
+                <label >
+                    <img src="../../images/闭眼.png" alt="" id="button">
+                </label>
+                <input type="password" id="password" placeholder="请 输 入 密 码"  name="password" th:value="${password}">
+            </td>
+        </tr>
+        <tr>
+            <!-- <input id="check" type="checkbox" class="check" checked="">
+            <label for="check"><span class="icon"></span> 记住密码</label> -->
+            <div class="choose">
+                <input class="check checkSty" id="agreeOrNot" type="checkbox" value="1" name="remember">
+                记住密码
+            </div>
+        </tr>
+        <tr>
+            <div class="box bg-1" style="position: absolute;left: 640px;top: 455px;">
+                <button class="button button--itzel button--text-thick" type="submit" value="登录">
+                    <i class="button__icon icon icon-cart"></i><span>登&nbsp;&nbsp;录</span></button>
+            </div>
+            <!-- <td>
+                <button type="submit" value="登录" id="white">
+                </button>
+            </td> -->
+        </tr>
+    </table>
+</form>
+<script>
+    let bt = document.getElementById('button')
+    let sf = document.getElementById('password')
+    let flag = true
+    bt.onclick = function () {
+        if (flag) {
+            sf.type = 'title'
+            bt.src = "../images/睁眼.png"
+            flag = false
+        } else {
+            sf.type = 'password'
+            bt.src = "../images/闭眼.png"
+            flag = true
+        }
+    }
+    var enter =function(){
+        var checkSty = $(".checkSty").is(":checked");
+        //判断checkbox是否被选中
+        if (checkSty==false){
+            //r如果没有被选中，则显示弹窗
+            layer.msg('请先同意阅读须知!');
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

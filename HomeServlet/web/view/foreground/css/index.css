@@ -1,0 +1,476 @@
+/* 小圆点*/
+#logo {
+  position: absolute;
+  display: flex;
+  height: 30px;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -125px;
+}
+
+#logo li {
+  width: 30px;
+  height: 30px;
+  background: url(../images/logobanner.png) right no-repeat;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#logo .active {
+  background: url(../images/logobanner.png) left no-repeat;
+}
+
+/* 小圆点*/
+
+/* 左右箭头 */
+.toggle {
+  width: 1456px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+}
+
+.toggle a {
+  margin: 0;
+  padding: 0;
+  font-size: 100px;
+  position: absolute;
+  text-align: center;
+  width: 75px;
+  height: 200px;
+  line-height: 200px;
+  background-color: rgba(220, 220, 220, 0.3);
+  color: rgba(255, 255, 255, 0.71);
+}
+
+.toggle a:hover {
+  background-color: rgba(74, 74, 74, 0.782);
+}
+
+/* 左右箭头 */
+
+
+/*主页框架*/
+.main {
+  position: relative;
+  width: 1456px;
+  height: 1800px;
+  margin: 0 auto;
+  padding-top: 55px;
+}
+
+.main a {
+  margin: 0;
+}
+
+.main .in {
+  position: relative;
+  width: 1456px;
+  height: 750px;
+}
+
+.main .in .pic {
+  position: relative;
+  clear: both;
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1456px;
+  height: 625px;
+}
+
+.main .in .image {
+  position: absolute;
+  width: 750px;
+  height: 500px;
+  right: 0;
+  bottom: 0;
+  background: url(../images/bjimage.jpg);
+  opacity: 0.9;
+  background-size: 750px 500px;
+}
+
+.main .pic>p {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  width: 1456px;
+  height: 125px;
+  line-height: 30px;
+}
+
+.main .pic>p,
+.main .write>span {
+  text-indent: 2em;
+}
+
+.main .pic .write {
+  position: absolute;
+  bottom: 0;
+  width: 705px;
+  height: 500px;
+}
+
+.main .pic span {
+  display: block;
+  width: 705px;
+  height: 250px;
+  line-height: 35px;
+}
+
+/* 发展历程 */
+.main .delop {
+  width: 1456px;
+  height: 700px;
+  padding-top: 25px;
+}
+
+/* 四大行当 */
+.main .delop {
+  clear: both;
+  width: 1456px;
+  height: 700px;
+  margin-top: 35px;
+}
+
+.top {
+  padding-top: 100px;
+  width: 1456px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#kind {
+  position: relative;
+  width: 1255px;
+  height: 370px;
+  margin: 0 auto;
+}
+
+#kind li {
+  position: relative;
+  width: 250px;
+  height: 370px;
+  margin-right: 85px;
+}
+
+#kind li a {
+  position: absolute;
+  width: 236px;
+  height: 236px;
+  left: 50%;
+  margin-left: -118px;
+  border-radius: 50%;
+}
+
+#kind li a:hover img {
+  transform: scale(1.5, 1.5);
+}
+
+#kind li:last-child {
+  margin: 0;
+}
+
+#kind li #kind_top {
+  top: 0;
+}
+
+#kind li #kind_bottom {
+  bottom: 0;
+}
+
+#kind li a>img {
+  width: 236px;
+  height: 236px;
+  border-radius: 50%;
+  transition: all 2s ease-in-out;
+}
+
+#kind li>div {
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+#kind li .img_box1 {
+  width: 150px;
+  height: 210px;
+  background: url(../images/生旦净丑.png) -100px -30px;
+}
+
+#kind li .img_box2 {
+  width: 150px;
+  height: 210px;
+  background: url(../images/生旦净丑.png) -300px -40px;
+}
+
+#kind li .img_box3 {
+  width: 160px;
+  height: 210px;
+  background: url(../images/生旦净丑.png) -510px -20px;
+}
+
+#kind li .img_box4 {
+  left: 0;
+  width: 160px;
+  height: 210px;
+  background: url(../images/生旦净丑.png) -720px -40px;
+}
+
+/* 四大行当 */
+
+/* 五大剧种 */
+.kinds {
+  clear: both;
+  width: 1456px;
+  height: 790px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.kbox {
+  width: 291px;
+  height: 690px;
+  transition: all 600ms;
+}
+
+.kbox a {
+  z-index: 10;
+  position: absolute;
+  width: 25px;
+  height: 100px;
+  font-size: 22px;
+  margin-left: 15px;
+  color: rgba(255, 255, 255, 0.678);
+}
+
+.kbox img {
+  width: 900px;
+  height: 690px;
+}
+
+/* 五大剧种 */
+
+/* 戏曲名家 */
+.famous {
+  width: 1456px;
+  height: 600px;
+  margin: 55px auto;
+}
+
+.famous ul {
+  padding: 0;
+  margin: 0 auto;
+  width: 1000px;
+  height: 500px;
+}
+
+.famous ul li {
+  height: 450px;
+  width: 650px;
+  background-color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.famous li.roundabout-in-focus {
+  cursor: default;
+}
+
+.famous li span {
+  display: block;
+  padding-top: 50px;
+}
+
+#carbonads-container .carbonad {
+  margin: 0 auto;
+}
+
+/* 戏曲名家 */
+
+/* 学术资源 */
+.school {
+  clear: both;
+  position: relative;
+  width: 1456px;
+  height: 700px;
+  padding-top: 55px;
+  margin: 0 auto;
+}
+
+.school>.title {
+  width: 300px;
+  height: 60px;
+  margin: 0 auto 25px;
+}
+
+.school>.title>h2 {
+  position: static;
+  margin: 0;
+  width: 300px;
+  height: 60px;
+}
+
+.school a {
+  margin: 0;
+}
+
+.school .school_nav>ul {
+  width: 1456px;
+  margin: 0 auto;
+  background-color: #a06e6e;
+}
+
+.school .school_nav>ul .news {
+  position: relative;
+  width: 452px;
+  height: 600px;
+  padding: 0 5px;
+  margin-right: 35px;
+  line-height: 75px;
+}
+
+.school .school_nav>ul .news>a {
+  position: absolute;
+  right: 0;
+}
+
+/* 新闻动态 */
+.school_nav .news>a:hover {
+  color: brown;
+}
+
+.school_nav .news img {
+  width: 457px;
+  height: 300px;
+}
+
+.school_nav #news_ul>li {
+  margin: 0;
+  padding: 0;
+  width: 457px;
+  height: 35px;
+  line-height: 30px;
+}
+
+.school_nav #news_ul>li>a p {
+  font-size: 16px;
+  float: left;
+  width: 362px;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.school_nav #news_ul>li>span {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 85px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  color: rgba(38, 38, 38, 0.571);
+  right: 0;
+}
+
+/* 新闻动态 */
+
+/* 推荐曲目 */
+.school_nav h3 {
+  display: inline;
+  text-align: center;
+}
+
+.school_nav .mes {
+  width: 949px;
+}
+
+.school_nav .mes .mes_box {
+  position: relative;
+  width: 949px;
+  text-align: center;
+  height: 75px;
+  line-height: 75px;
+}
+
+.school_nav .mes .mes_box a {
+  position: absolute;
+  right: 2px;
+}
+
+.school_nav .mes .mes_box a:hover {
+  color: brown;
+}
+
+.school_nav .mes #mes_ul li {
+  width: 182px;
+  height: 242px;
+  float: left;
+  margin: 0 3px 12px 4px;
+}
+
+.school_nav .mes #mes_ul li img {
+  width: 180px;
+  height: 240px;
+  border: #CCC solid 1px;
+  /* box-shadow: 水平位置 垂直位置 模糊距离 阴影尺寸(影子大小) 内外阴影inset，默认外阴影 */
+}
+
+.school_nav .mes #mes_ul li img:hover {
+  box-shadow: 5px 5px 3px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.9s;
+}
+
+/* 电梯 */
+.elevator {
+  position: fixed;
+  left: 50%;
+  top: 280px;
+  z-index: 999;
+  right: 20px;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.elevator .elevator-list {
+  width: 120px;
+  height: 450px;
+  background: rgba(255, 246, 222,0.5%);
+  float: right;
+  position: relative;
+}
+
+.elevator .elevator-list li {
+  height: 30px;
+  padding: 15px;
+}
+
+.elevator .elevator-list li a {
+  text-decoration: none;
+  width: 90px;
+  height: 30px;
+  color: #000;
+  display: block;
+}
+
+.elevator .elevator-list li a:hover,
+.elevator .elevator-list li a.active {
+  color: rgba(183, 5, 5, 0.91);
+}
+
+.elevator .elevator-list li a i {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 4px;
+  background-position: 10px -95px;
+  font-size: 20px;
+  transform: rotate(-80deg);
+}
