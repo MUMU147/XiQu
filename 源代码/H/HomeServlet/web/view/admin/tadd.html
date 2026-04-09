@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/view/admin/css/index.css}">
+    <link rel="stylesheet" th:href="@{/view/admin/css/commom.css}">
+    <link rel="stylesheet" th:href="@{/view/admin/css/add_pd_pe.css}">
+</head>
+<body>
+<div class="header right">
+    <a th:href="@{/pindex}">首页</a>
+    <!-- <span>&gt;</span> -->
+    <a href="index.html">
+        <img src="view/admin/images/slogo.png" alt="" class="left">
+    </a>
+    <p class="right">
+        <span>欢迎进入后台系统，管理员</span>
+        <img src="" alt="" class="right">
+    </p>
+</div>
+<div class="List left">
+    <div id="first">
+        <button class="accordion"> 首页</button>
+        <button class="accordion">用户管理</button>
+        <button class="accordion">商品管理</button>
+        <ul class="btn-content">
+            <li><button th:onclick="location='/HomeServlet/tindex'">戏曲票</button>
+            </li>
+            <li><button th:onclick="location='/HomeServlet/pindex'">戏曲文创</button></li>
+        </ul>
+        <button class="accordion">新闻管理</button>
+        <ul class="btn-content">
+            <li><button>剧院新闻</button></li>
+            <li><button>文创新闻</button></li>
+            <li><button>政策新闻</button></li>
+        </ul>
+        <button class="accordion">订单管理</button>
+        <ul class="btn-content">
+            <li><button>戏票订单</button></li>
+            <li><button>文创订单</button></li>
+        </ul>
+        <button class="accordion">统计中心</button>
+        <a href="index.html">退出管理</a>
+    </div>
+</div>
+    <div class="content left">
+       <div class="common">
+           <form method="post" th:action="@{'/mticketadd'}" enctype="multipart/form-data">
+               <table id="ttbl_products">
+                   <tr>
+                       <td class="w20">名称：</td>
+                       <td><input type="text" name="tname"></td>
+                   </tr>
+                   <tr>
+                       <td class="w20">票价：</td>
+                       <td><input type="text" name="tprice"></td>
+                   </tr>
+                   <tr>
+                       <td class="w20">种类：</td>
+                       <td><input type="text" name="tkind"></td>
+                   </tr>
+                   <tr>
+                       <td class="w20">图片：</td>
+                       <td><input type="file" name="timg"></td>
+                   </tr>
+                   <tr>
+                       <td colspan="2"><input type="submit" value="添加" id="ttbl_products_btn"></td>
+                   </tr>
+               </table>
+           </form>
+       </div>
+    </div>
+</body>
+<script th:src="@{/view/admin/js/index.js}"></script>
+</html>

@@ -1,0 +1,46 @@
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# 个人专属的 IDEA 配置（包含数据库连接信息 dataSources.xml 等）
+.idea/
+*.iml
+*.log
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+.vs/
+
+### Mac OS ###
+.DS_Store
+Thumbs.db
+
+# 数据库配置文件（防止泄露数据库账号密码）
+jdbc.properties
+db.properties
+application.yml
+application.properties
+
+# Build outputs
+target/
+**/target/

@@ -1,0 +1,75 @@
+
+/*proadd页面*/
+.common input {
+    width: 450px;
+    height: 30px;
+    padding-left: 15px;
+}
+#ttbl_products {
+    width: 550px;
+    height: 100px;
+    line-height: 50px;
+    margin:25px  250px;
+}
+
+#ttbl_products a {
+    display: block;
+    font-size: 20px;
+    color: rgb(39, 36, 33);
+}
+
+#ttbl_products th {
+    font-weight: 400;
+}
+
+#ttbl_products td {
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#ttbl_products td #ttbl_products_btn{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/*prodetail页面*/
+.common  #products{
+    width: 950px;
+    height: 920px;
+    margin: 15px 80px;
+}
+.common #products li{
+    background-color: rgb(246, 219, 191);
+    width: 950px;
+    height: 50px;
+    margin-top: 15px;
+}
+.common  #products li span{
+    text-align: center;
+    font-size: 21px;
+}
+.common  #products li img{
+    width: 400px;
+    height:600px ;
+}
+
+/*proedit页面*/
+.common  #pfrom{
+    text-align: center;
+    background-color: rgb(246, 219, 191);
+    width: 950px;
+    height: 50px;
+    margin-top: 30px;
+}
+.common  #pfrom>input {
+    width: 500px;
+    height: 45px;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+.common  #pfrom>input:last-child{
+    width: 200px;
+}

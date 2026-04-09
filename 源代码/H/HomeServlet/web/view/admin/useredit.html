@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+    <link rel="stylesheet" th:href="@{/view/admin/css/index.css}">
+    <link rel="stylesheet" th:href="@{/view/admin/css/commom.css}">
+    <link rel="stylesheet" th:href="@{/view/admin/css/add_pd_pe.css}">
+</head>
+<body>
+<div class="header right">
+    <a th:href="@{/pindex}">首页</a>
+    <!-- <span>&gt;</span> -->
+    <a href="index.html">
+        <img src="view/admin/images/slogo.png" alt="" class="left">
+    </a>
+    <p class="right">
+        <span>欢迎进入后台系统，管理员</span>
+        <img src="" alt="" class="right">
+    </p>
+</div>
+<div class="List left">
+    <div id="first">
+        <button class="accordion"> 首页</button>
+        <button class="accordion">用户管理</button>
+        <button class="accordion">商品管理</button>
+        <ul class="btn-content">
+            <li><button th:onclick="location='/HomeServlet/tindex'">戏曲票</button>
+            </li>
+            <li><button th:onclick="location='/HomeServlet/pindex'">戏曲文创</button></li>
+        </ul>
+        <button class="accordion">新闻管理</button>
+        <ul class="btn-content">
+            <li><button>剧院新闻</button></li>
+            <li><button>文创新闻</button></li>
+            <li><button>政策新闻</button></li>
+        </ul>
+        <button class="accordion">订单管理</button>
+        <ul class="btn-content">
+            <li><button>戏票订单</button></li>
+            <li><button>文创订单</button></li>
+        </ul>
+        <button class="accordion">统计中心</button>
+        <a th:href="@{/logout}">退出管理</a>
+    </div>
+</div>
+<div class="content left">
+    <div class="common">
+        <form th:action="@{'/userupdate'}" method="post" id="pfrom">
+            <input type="hidden" th:value="${user.uid}" name="uid">
+            用户名：<input type="text" th:value="${user.username}" name="username"><br>
+            <!-- 开源安全说明：不回填旧密码，留空表示不修改密码 -->
+            密码：<input type="password" name="password" placeholder="留空表示不修改"><br>
+            邮箱：<input type="text" th:value="${user.email}" name="email"><br>
+            手机号：<input type="text" th:value="${user.phone}" name="phone"><br>
+            昵称：<input type="text" th:value="${user.nickname}" name="nickname"><br>
+            <input type="submit" value="修改">
+        </form>
+    </div>
+</div>
+</body>
+<script th:src="@{/view/admin/js/index.js}"></script>
+</html>

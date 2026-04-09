@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    width: 1472.5px;
+    height: 1080px;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 36px;
+    color: rgb(197, 73, 55);
+    text-shadow: 5px 2px 2px rgb(181, 56, 37, 0.5);
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+a,
+button {
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(232, 192, 165);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+a{
+    margin: 0 10px;
+}
+span {
+    font-size: 18px;
+    color: rgb(232, 192, 165)
+}
+
+/* header */
+.header {
+    width: 1132.5px;
+    height: 100px;
+    background: url(../images/wbacc.png) no-repeat;
+    padding-left: 40px;
+}
+
+.header a,
+span {
+    line-height: 100px;
+    margin: 0 5px;
+}
+
+.header a img {
+    margin-top: 29px;
+}
+
+.header p {
+    height: 75px;
+    line-height: 100px;
+}
+
+.header p img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: aqua;
+    margin: 24px 15px 10px 10px;
+}
+
+/* header */
+
+
+
+/* 二级导航 */
+.List {
+    text-align: center;
+    width: 300px;
+    height: 1080px;
+    background: url(../images/lbacc.png) no-repeat;
+}
+
+.List #logo {
+    width: 226px;
+    height: 80px;
+    margin: 30px 40px 0;
+}
+
+.List #first {
+    width: 285px;
+    height: 800px;
+    margin: 80px auto 0;
+}
+
+.List #first button,
+.List #first a {
+    display: block;
+    width: 285px;
+    height: 80px;
+    line-height: 80px;
+    margin-top: 5px;
+}
+
+.List .accordion:hover {
+    box-shadow: 8px 5px 5px rgba(64, 23, 16, 0.4);
+}
+
+.active,
+.List .accordion:hover,
+.List a:hover,
+.List li:hover {
+    color: rgb(253, 230, 166);
+    background: url(../images/bbacc.png) no-repeat;
+}
+
+.List .btn-content {
+    width: 285px;
+}
+
+.List .btn-content li {
+    width: 285px;
+    display: block;
+    line-height: 80px;
+    overflow: hidden;
+    /*与高度为0 结合，溢出的部分隐藏*/
+    height: 0px;
+    /*高度0*/
+    transition: all .3s;
+}
+
+.List .btn-content li button {
+    display: block;
+    font-size: 20px;
+}
+
+.List .btn-content li a:hover {
+    background-color: rgb(106, 36, 25);
+}
+
+.aclick {
+    background-color: rgb(106, 36, 25);
+}
+
+/* 二级导航 */
+
+/* 内容 */
+.content {
+    width: 1172.5px;
+    height: 980px;
+}
+
+/* .choose {
+  background-color: rgb(216, 0, 0);
+  color: rgb(255, 255, 255);
+} */
+
+
+/* 内容 */

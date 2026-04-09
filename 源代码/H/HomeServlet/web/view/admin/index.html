@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/view/admin/css/index.css}">
+    <link rel="stylesheet" th:href="@{/view/admin/css/commom.css}">
+</head>
+<body>
+<div class="header right">
+    <a th:href="@{/pindex}">首页</a>
+    <!-- <span>&gt;</span> -->
+    <a href="./index.html">
+        <img src="view/admin/images/slogo.png" alt="" class="left">
+    </a>
+    <p class="right">
+        <span>欢迎进入后台系统，管理员</span>
+        <img src="view/admin/images/IMG_20231207_143113.jpg"  alt="" class="right">
+    </p>
+</div>
+<div class="List left">
+    <div id="first">
+        <button class="accordion"> 首页</button>
+        <button class="accordion">用户管理</button>
+        <button class="accordion">商品管理</button>
+        <ul class="btn-content">
+            <li><button th:onclick="location='/HomeServlet/tindex'">戏曲票</button>
+            </li>
+            <li><button th:onclick="location='/HomeServlet/pindex'">戏曲文创</button></li>
+        </ul>
+        <button class="accordion">新闻管理</button>
+        <ul class="btn-content">
+            <li><button>剧院新闻</button></li>
+            <li><button>文创新闻</button></li>
+            <li><button>政策新闻</button></li>
+        </ul>
+        <button class="accordion">订单管理</button>
+        <ul class="btn-content">
+            <li><button>戏票订单</button></li>
+            <li><button>文创订单</button></li>
+        </ul>
+        <button class="accordion">统计中心</button>
+        <button class="accordion" th:onclick="location='/HomeServlet/logout'">退出管理系统</button>
+    </div>
+</div>
+<div class="content left">
+    <div id="first" class="tab" style="display: block;" name="king">
+        <img src="view/admin/images/header.png" alt="">
+        <div class="circle"><img src="view/admin/images/sybj.png" alt=""></div>
+        <ul class="right">
+            <li>
+                <h2>TOP2</h2>
+            </li>
+            <li>
+                <h1>TOP1</h1>
+            </li>
+            <li>
+                <h3>TOP3</h3>
+            </li>
+        </ul>
+    </div>
+    <div id="second" class="common tab" style="display: none;" name="king">
+        <form th:action="@{'/myuindex'}" method="post">
+            <span>请输入用户名进行查询</span>
+            <input type="text" name="keyword" />
+            <input type="submit" value="查询" class="btn" name="searchone">
+            <input type="submit" value="显示所有" class="btn" name="searchtwo" />
+            <input type="submit" value="添加" class="btn">
+            <br>
+        </form>
+        <table id="ttbl_product">
+            <tr>
+                <th class="w20">用户id</th>
+                <th class="w20">用户名称</th>
+                <th class="w20">密码状态</th>
+                <th class="w20">用户手机号</th>
+                <th class="w20">用户邮箱</th>
+                <th class="w20">用户绰号</th>
+                <th class="w20">操作</th>
+            </tr>
+            <!--  如果链表为空-->
+            <tr th:if="${#lists.isEmpty(users)}"> </tr>
+            <!--            如果链表不为空，取出数据-->
+            <tr th:unless="${#lists.isEmpty(users)}" th:each="user:${users}">
+                <td th:text="${user.uid}"></td>
+                <td th:text="${user.username}"></td>
+                <!-- 开源安全说明：后台列表禁止展示明文密码 -->
+                <td>******</td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.phone}"></td>
+                <td th:text="${user.nickname}"></td>
+                <td>
+                    <a href="" th:href="@{/useredit(uid=${user.uid})}">修改信息</a>
+                    <a href="" th:href="@{/muserdel(uid=${user.uid})}">删除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="third" class="common tab" style="display: none;" name="king">
+        <form th:action="@{'/mypindex'}" method="post">
+            <span>请输入商品名称进行查询</span>
+            <input type="text" class="keyword" name="keyword" />
+            <input type="submit" value="查询" class="btn" name="searchone" id="wo">
+            <input type="submit" value="显示所有" class="btn" name="searchtwo" />
+            <input type="submit" value="添加" class="btn" name="good">
+            <br>
+        </form>
+        <table id="ttbl_product">
+            <tr>
+                <th class="w20">商品号</th>
+                <th class="w20">商品名称</th>
+                <th class="w20">单价</th>
+                <th class="w20">库存</th>
+                <th class="w20">操作</th>
+            </tr>
+            <!--  如果链表为空-->
+            <tr th:if="${#lists.isEmpty(products)}"> </tr>
+            <!--            如果链表不为空，取出数据-->
+            <tr th:unless="${#lists.isEmpty(products)}" th:each="product:${products}">
+                <td th:text="${product.pid}"></td>
+                <td><a th:href="@{/proedit(pid=${product.pid})}" th:text="${product.pname}"></a></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.stock}"></td>
+                <td>
+                    <a th:href="@{/prodetail(pid=${product.pid})}">详情</a>
+                    <a th:href="@{/mproductdel(pid=${product.pid})}">删除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="four" class="common tab" style="display: none;" name="king">
+        <form th:action="@{'/mypindex'}" method="post">
+            <span>请输入新闻标题进行查询</span>
+            <input type="text" name="keyword" />
+            <input type="submit" value="查询" class="btn" name="searchone">
+            <input type="submit" value="添加" class="btn" name="">
+            <br>
+        </form>
+        <table id="ttbl_product">
+            <tr>
+                <th class="w20">新闻时间</th>
+                <th class="w20">新闻标题</th>
+                <th class="w20">新闻来源</th>
+                <th class="w20">操作</th>
+            </tr>
+            <!--  如果链表为空-->
+            <tr th:if="${#lists.isEmpty(products)}"> </tr>
+            <!--            如果链表不为空，取出数据-->
+            <tr th:unless="${#lists.isEmpty(products)}" th:each="product:${products}">
+                <td th:text="${product.price}">新闻时间</td>
+                <td th:text="${product.price}">新闻标题</td>
+                <td th:text="${product.stock}">新闻来源</td>
+                <td>
+                    <a href="">详情</a>
+                    <a href=""><img src="" alt="">删除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="five" class="common tab" style="display: none;" name="king">
+        <form th:action="@{'/myoindex'}" method="post">
+            <span>请输入订单号进行查询</span>
+            <input type="text" name="keyword" />
+            <input type="submit" value="查询" class="btn" name="search">
+            <input type="submit" value="显示所有" class="btn" name="search" />
+            <input type="submit" value="添加" class="btn">
+            <br>
+        </form>
+        <table id="ttbl_product">
+            <tr>
+                <th class="w20">订单号</th>
+                <th class="w20">下单时间</th>
+                <th class="w20">手机号</th>
+                <th class="w20">收货人</th>
+                <th class="w20">配送地址</th>
+                <th class="w20">订单金额</th>
+                <th class="w20">操作</th>
+            </tr>
+            <!--  如果链表为空-->
+            <tr th:if="${#lists.isEmpty(orders)}"> </tr>
+            <!--            如果链表不为空，取出数据-->
+            <tr th:unless="${#lists.isEmpty(orders)}" th:each="order:${orders}">
+                <td th:text="${order.oid}">订单号</td>
+                <td th:text="${order.otime}">下单时间</td>
+                <td th:text="${order.ophone}">手机号</td>
+                <td th:text="${order.own}">收货人</td>
+                <td th:text="${order.oaddress}">配送地址</td>
+                <td th:text="${order.omoney}">订单金额</td>
+                <td>
+                    <a href=""><img src="" alt="">删除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="six" class="tab" style="display: none;" name="king">统计中心</div>
+</div>
+</body>
+<script th:src="@{/view/admin/js/index.js}"></script>
+</html>

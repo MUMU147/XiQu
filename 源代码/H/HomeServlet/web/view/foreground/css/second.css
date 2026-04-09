@@ -1,0 +1,84 @@
+h1 {
+  display: block;
+  width: 400px;
+  line-height: 100px;
+  font-size: 65px;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.main img {
+  width: 1000px;
+  position: absolute;
+  z-index: -10;
+  right: 0;
+  opacity: 0.7;
+}
+
+.main .bj {
+  width: 500px;
+  position: absolute;
+  left: 0;
+  opacity: 0.5;
+}
+
+.main .bj3 {
+  width: 500px;
+  position: absolute;
+  right: 0;
+  opacity: 0.6;
+}
+
+.main .bj4 {
+  width: 500px;
+  position: absolute;
+  left: 0;
+  opacity: 0.6;
+}
+
+p {
+  text-indent: 2em;
+  line-height: 35px;
+}
+
+.borderr {
+  border-bottom: 2px solid rgb(148, 69, 70);
+}
+
+.main {
+  width: 1456px;
+  margin: 0 auto;
+}
+
+.main .first {
+  padding: 55px 45px;
+  width: 1366px;
+  margin: 0 auto;
+  float: left;
+}
+
+.main .second {
+  clear: both;
+  padding: 55px 45px;
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.main .second .h {
+  height: 300px;
+}
+
+.main .third {
+  clear: both;
+  padding: 55px 45px;
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.main .third p {
+  line-height: 150px;
+}

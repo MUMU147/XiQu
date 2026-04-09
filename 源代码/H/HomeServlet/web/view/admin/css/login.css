@@ -1,0 +1,196 @@
+body{
+    background:url(../images/东西.png) no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%
+}
+/* 阅读同意协议 */
+.choose{
+    font-size: small;
+    color: rgb(102, 102, 102);
+    position: absolute;
+    left: 655px;
+    top: 410px;
+}
+/* 密码眼睛 */
+input[type="password"]::-ms-reveal {
+    display: none
+}
+#button{
+    position: absolute;
+    top: 65px;
+    left:277px;
+    width: 24px;
+}
+/* 外头的毛玻璃 */
+#ddiv{
+    width: 450px;
+    height:360px;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom:300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 37px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255,255,255, 0.049);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 1px rgba(255,255,255,0.4) solid;
+    border-bottom: 1px rgba(40,40,40,0.35) solid;
+    border-right: 1px rgba(40,40,40,0.35) solid;
+}
+*{margin:0;padding:0;}
+/* 框框里的账号 */
+#accountnumber{
+    width: 250px;
+    height:40px;
+    border-radius:10px;
+    text-indent:10px;
+    position: relative;
+    /* margin-bottom: 20px; */
+}
+/* 框框里的密码 */
+#password{
+    /* position:relative; */
+    width: 250px;
+    height:40px;
+    border-radius:10px;
+    text-indent:10px;
+}
+/* #border-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+} */
+
+/*
+input{
+    border:none;
+}
+
+#border-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#white{
+    color:white;
+}
+button {
+  border: 0;
+  border-radius: 10px;
+  background: #c42e2e;
+  text-transform: uppercase;
+
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  outline: none;
+  position: relative;
+  transition: border-radius 3s;
+  -webkit-transition: border-radius 1s;
+}
+
+button:hover {
+   border-bottom-right-radius: 50px;
+   border-top-left-radius: 50px;
+   border-bottom-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+*/
+table{
+    margin: 0 auto;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    bottom:300px;
+}
+/* 登录按钮 */
+.button--itzel {
+    font-size: large;
+    font-weight:bold;
+    border: none;
+    border-radius: 27px;
+    padding: 0px;
+    overflow: hidden;
+    width: 258px;
+    height: 65px;
+    position: absolute;
+    margin: 0 auto;
+    color: aliceblue;
+    background-color:rgba(156, 10, 0, 0.888);
+}
+
+.button--itzel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 105px;
+    width: 50px;
+    height: 65px;
+    border-radius: inherit;
+    -webkit-clip-path:polygon(53% 27%, 83% 51%, 53% 75%, 19% 75%, 52% 50%, 19% 27%);
+    background-color: rgb(255, 210, 61);
+    clip-path:polygon(53% 27%, 83% 51%, 53% 75%, 19% 75%, 52% 50%, 19% 27%);
+    /* clip-path:polygon(0% 20%,60% 20%,60% 0%,100% 50%,60% 100%,60% 80%,0% 80%); */
+    /* -webkit-clip-path: (0% 0%, 0% 100%, 35% 100%, 35% 60%, 65% 60%, 65% 100%, 100% 100%, 100% 0%);
+    clip-path: url('../index.html#clipBox'); */
+    transform: translate3d(0, 100%, 0) translate3d(0, 0, 0);
+    transform-origin: 50% 100%;
+}
+
+.button--itzel.button--border-thin::before {
+    border: 1px solid;
+    transform: translate3d(0, 100%, 0) translate3d(0, -1px, 0);
+}
+
+.button--itzel.button--border-thick::before {
+    border: 3px solid;
+    transform: translate3d(0, 100%, 0) translate3d(0, -3px, 0);
+}
+
+.button--itzel::before,
+.button--itzel .button__icon {
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--itzel .button__icon {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    padding: 20px;
+    font-size: 20px;
+    transform: translate3d(-50%, 0, 0);
+}
+
+.button--itzel > span {
+    display: block;
+    padding: 20px;
+    transition: transform 0.3s, opacity 0.3s;
+    transition-delay: 0.3s;
+}
+
+.button--itzel:hover::before {
+    transform: translate3d(0, 0, 0);
+}
+
+.button--itzel:hover .button__icon {
+    transition-delay: 0.1s;
+    /* transform: translate3d(-50%, -100%, 0); */
+}
+
+.button--itzel:hover > span {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+    transition-delay: 0s;
+}

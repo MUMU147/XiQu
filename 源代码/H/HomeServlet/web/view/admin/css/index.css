@@ -1,0 +1,153 @@
+/*首页 */
+.content #first,
+.content #first img {
+    width: 1165px;
+    height: 398px;
+    margin: 20px auto 0;
+}
+
+.content #first .circle,
+.content #first .circle img {
+    position: absolute;
+    width: 518px;
+    height: 430px;
+    bottom: 0;
+    margin: 0;
+    right: 405px;
+    z-index: -1;
+}
+
+.content ul {
+    position: absolute;
+    width: 780px;
+    height: 485px;
+    bottom: 0;
+    right: 0;
+}
+
+.content ul li {
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 485px;
+    margin: 0 15px;
+    background-color: aqua;
+    border-radius: 25px;
+}
+
+.content ul li h1,
+.content ul li h2,
+.content ul li h3 {
+    width: 220px;
+    height: 80px;
+    position: absolute;
+    top: -25px;
+}
+
+/* 底部页面 */
+#bottom {
+    position: absolute;
+    width: 310px;
+    height: 34px;
+    bottom: 75px;
+    left: 60%;
+    margin-left: -155px;
+}
+
+#bottom::before {
+    width: 28px;
+    height: 30px;
+    background-color: aqua;
+}
+
+#bottom li {
+    float: left;
+    width: 28px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 0;
+    border: 2px solid rgb(91, 31, 22);
+    background-color: rgb(253, 244, 228);
+}
+
+/* 订单信息 */
+.common {
+    width: 1082px;
+    height: 920px;
+    overflow: hidden;
+    margin: 15px 15px;
+    padding: 15px 30px;
+    background-color: rgb(244, 210, 175, 0.8);
+    border-radius: 25px;
+}
+
+.common input,
+.common>a {
+    border: 2px solid rgb(91, 31, 22);
+    background-color: rgb(244, 208, 172);
+    color: rgb(63, 61, 59);
+    border-radius: 5px;
+}
+
+.common input {
+    width: 225px;
+    height: 30px;
+    padding-left: 15px;
+}
+
+.common .btn {
+    width: 80px;
+    height: 30px;
+    padding: 0;
+    color: rgb(244, 208, 172);
+    background-color: rgb(91, 31, 22);
+}
+
+.common .addmes {
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.common span {
+    line-height: 50px;
+    font-size: 20px;
+    color: rgb(39, 36, 33);
+    margin: 0 20px 0 10px;
+}
+
+.common>a {
+    position: absolute;
+    font-size: 14px;
+    /*width: 120px;*/
+    /*height: 30px;*/
+    line-height: 30px;
+    text-align: center;
+    right: 60px;
+    top: 191px;
+}
+
+#ttbl_product {
+    width: 1050px;
+    line-height: 60px;
+    margin: 45px auto 0;
+}
+
+#ttbl_product td a {
+    font-size: 18px;
+    color: rgb(39, 36, 33);
+}
+
+#ttbl_product th {
+    font-weight: 400;
+}
+
+#ttbl_product,
+#ttbl_product tr,
+#ttbl_product th,
+#ttbl_product td {
+    border: 2px solid rgb(91, 31, 22);
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+}

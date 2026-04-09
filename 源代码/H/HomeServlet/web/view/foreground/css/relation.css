@@ -1,0 +1,152 @@
+
+.rbanner{
+    width: 100%;
+    margin: 0 auto;
+}
+.rbanner img{
+    width: 100%;
+}
+.rmain {
+    width: 100%;
+    padding: 50px 0;
+    background-color: rgb(239, 227, 211);
+}
+h1{
+    clear: both;
+    text-align: center;
+    font-size: 28px;
+    display: block;
+    width: 250px;
+    height: 65px;
+    line-height: 65px;
+    background-color: rgb(106, 36, 25);
+    border-radius: 15px;
+    margin: 20px auto;
+    color: #eee;
+}
+.rmain .plist{
+    position: relative;
+    padding: 15px 0 15px 50px;
+    margin: 0 auto;
+    width: 1000px;
+    height: 240px;
+    border-radius: 15px;
+    background-color:  rgba(253, 244, 228,0.8);
+}
+p{
+    font-size: 20px;
+    margin-top:25px ;
+}
+.rmain img{
+    position: absolute;
+    right: 0;
+    top: -75px;
+    width: 450px;
+}
+.rmain .new{
+    width: 1372px;
+    height: 450px;
+    padding: 25px 50px;
+}
+.rmain .new img{
+    float: left;
+    position: relative;
+    top: 5px;
+    width: 600px;
+    height: 450px;
+    border-radius: 35px;
+}
+.rmain .new .newlist{
+    padding: 10px 25px;
+    float: left;
+    width: 650px;
+    height: 450px;
+    margin-left: 25px;
+}
+.rmain .new .newlist h3{
+    font-size: 28px;
+    text-align: center;
+}
+.rmain .new .newlist p,
+.rmain .anew a span,
+.rmain .anew a p{
+    margin: 0;
+    font-size: 18px;
+    line-height: 35px;
+}
+.rmain .anew a{
+    padding-left: 50px;
+    position: relative;
+    display: block;
+    text-align: left;
+    color: #0a0a0a;
+}
+.rmain .anew a:hover,.rmain ul li a:hover{
+    color: rgb(106, 36, 25);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(106, 36, 25);
+}
+.rmain .anew a span,.rmain .anew a p{
+    display: inline-block;
+    line-height: 45px;
+}
+.rmain .anew a span{
+    position: absolute;
+    right: 10px;
+}
+.rmain  #nbanner{
+    position: relative;
+   width: 1472px;
+    height: 210px;
+    margin: 20px 0;
+}
+.rmain #nbanner img{
+    border-radius: 15px;
+    width: 1000px;
+    top: 0;
+    right: 50%;
+    margin-right: -500px;
+}
+.rmain ul{
+    width: 1100px;
+    margin: 0 auto;
+}
+.rmain ul li{
+    float: left;
+    width: 120px;
+    height: 40px;
+    padding: 5px 50px;
+}
+.rmain ul li a{
+    font-size: 20px;
+    color: #0a0a0a;
+    line-height: 40px;
+}
+.rmain .cnew{
+    clear: both;
+    width: 1372px;
+    height: 320px;
+    padding: 25px 50px;
+}
+.rmain .cnew img{
+    float: left;
+    position: relative;
+    top: 5px;
+    width: 450px;
+    height: 300px;
+    margin-right: 50px;
+}
+.rmain .cnew div{
+    padding-top: 35px;
+    float: left;
+    width: 872px;
+    height: 275px;
+}
+.rmain .cnew h4{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.rmain .cnew p{
+    margin: 0;
+    line-height: 35px;
+}

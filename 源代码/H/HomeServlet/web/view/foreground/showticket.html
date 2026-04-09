@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/HomeServlet/view/foreground/css/222.css">
+  <link rel="stylesheet" href="/HomeServlet/view/foreground/css/show.css">
+</head>
+<body>
+<div class="header">
+  <div class="shortcut">
+    <a th:href="@{/findex}"><h5 class="left">中国戏曲网站</h5></a>
+    <div class="right">
+      <a th:href="@{/fapiao}">账户</a>
+      <a th:href="@{/usere}"> <img src="/HomeServlet/view/foreground/images/dan.jpg" alt=""></a>
+      <a th:href="@{/forget}">退出登录</a>
+      <a th:href="@{/mycollect}">收藏</a>
+      <a th:href="@{/gwc}" >购物车</a>
+    </div>
+  </div>
+  <div class="nav">
+    <ul>
+      <li><a th:href="@{/sindex}">首页</a></li>
+      <li><a th:href="@{/pshow}">文创</a></li>
+      <li><a th:href="@{/tshow}">演出购票</a></li>
+      <li><a href="">资讯动态</a></li>
+      <li><a th:href="@{/regemail}">登录 | 注册</a></li>
+      <li>
+        <a href="">联系我们</a>
+      </li>
+    </ul>
+    <img src="/HomeServlet/view/foreground/images/center.png" alt="">
+  </div>
+</div>
+<div class="zhuti">
+  <div class="search">
+    <form th:action="@{'/tsindex'}" method="post" style="margin: 0 auto">
+      <input type="text" id="keyword" name="keyword" placeholder="请输入关键字"/>
+      <input type="submit" value="查询" class="btn" name="search">
+      <input type="submit" value="显示所有" class="btn" name="search" />
+    </form>
+  </div>
+  <div class="box-hd">
+    <h3>分类</h3>
+    <ul id="category-list">
+      <li><a href="#">京剧</a></li>
+      <li><a href="#">越剧</a></li>
+      <li><a href="#">黄梅戏</a></li>
+      <li><a href="#">豫剧</a></li>
+      <li><a href="#">评剧</a></li>
+      <li><a href="#">其他剧种</a></li>
+    </ul>
+  </div>
+  <div class="box-bd2">
+    <ul>
+      <li th:each="ticket:${sticket}" >
+        <img th:src="${ticket.timg}" alt="">
+        <div class="title"><span th:text="${ticket.tname}">名称</span></div>
+        <div class="info">
+          单价：<span th:text="${ticket.tprice}">单价</span>
+          <br>
+          <br>
+          剩余席位： <span th:text="${ticket.tcount}">剩余座位</span>
+        </div>
+        <div class="last">
+          <a th:href="@{/addtcollection(tidID=${ticket.ticID})}">加入收藏</a>
+        </div>
+      </li>
+    </ul>
+    <p style="clear: both"></p>
+  </div>
+</div>
+</body>
+</html>
