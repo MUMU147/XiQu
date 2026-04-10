@@ -79,12 +79,6 @@ a:hover {
             content:"";
             display:table;
         }
-
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #2A2A2A
-}
 img {
   border: 0;
   display: block

@@ -22,7 +22,7 @@ public class TicketShow extends ViewBaseServlet {
         TicketDAO ticketDAO=new TicketDAOImpl();
         List<Ticket> Tickets=ticketDAO.getticketList();
         request.setAttribute("sticket",Tickets);
-        System.out.println(Tickets);
+//        System.out.println(Tickets);
         super.processTemplate("foreground/showticket", request, response);
     }
 

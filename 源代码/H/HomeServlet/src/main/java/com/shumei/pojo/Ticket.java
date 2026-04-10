@@ -18,7 +18,7 @@ public class Ticket {
     public Ticket(String tname, Double tprice, int tcount, String timg) {
         this.tname = tname;
         this.tprice = tprice;
-        this.tcount = tcount;
+//        this.tcount = tcount;
         this.timg = timg;
     }
     public Ticket(int ticID, String tname, String timg) {

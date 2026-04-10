@@ -40,7 +40,7 @@ public class UserUpdate extends ViewBaseServlet {
             String nickname = request.getParameter("nickname");
             // 开源安全说明：页面不回填密码，留空时沿用原密码，避免被清空
             if (password == null || password.trim().isEmpty()) {
-                User oldUser = userDAO.selectByID(uid);
+                User oldUser = userDAO.getuserByUid(uid); // 获取用户信息
                 if (oldUser != null) {
                     password = oldUser.getPassword();
                 }

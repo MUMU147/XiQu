@@ -33,7 +33,6 @@ public class ViewBaseServlet extends HttpServlet {
 
         // ②设置前缀
         String viewPrefix = servletContext.getInitParameter("view-prefix");
-        System.out.println(viewPrefix);
         // web.xml 可能未被打包/加载成功时，initParameter 可能为 null。
         // 兜底：使用约定的模板目录前缀，避免找不到资源。
         if (viewPrefix == null || viewPrefix.trim().isEmpty()) {
@@ -49,7 +48,6 @@ public class ViewBaseServlet extends HttpServlet {
 
         // ③设置后缀
         String viewSuffix = servletContext.getInitParameter("view-suffix");
-        System.out.println(viewSuffix);
         if (viewSuffix == null || viewSuffix.trim().isEmpty()) {
             viewSuffix = ".html";
         }
@@ -71,9 +69,6 @@ public class ViewBaseServlet extends HttpServlet {
         // 5.给模板引擎对象设置模板解析器
         templateEngine.setTemplateResolver(templateResolver);
         // 在 init() 方法中添加
-        System.out.println("view-prefix: " + viewPrefix);
-        System.out.println("view-suffix: " + viewSuffix);
-
     }
 
     protected void processTemplate(String templateName, HttpServletRequest req, HttpServletResponse resp) throws IOException {

@@ -181,7 +181,7 @@ public class TicketDAOImpl implements com.shumei.dao.TicketDAO {
             String sql = "SELECT ticID,tname,tprice,tcount,timg FROM tickets WHERE tkind like ?";
 // 获取数据库预操作对象
             ps = conn.prepareStatement(sql);
-            ps.setString(1,"%"+keyword+"%");
+            ps.setString(1,"%"+keyword+"%");    // %是通配符，表示任意字符
             rs = ps.executeQuery();
             while (rs.next()){
                 int ticID=rs.getInt("ticID");
@@ -196,6 +196,7 @@ public class TicketDAOImpl implements com.shumei.dao.TicketDAO {
         } finally {
             DBUtil.close(conn, ps, rs);
         }
-        return list;
+        System.out.println(list);
+        return list;    //返回结果
     }
 }

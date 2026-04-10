@@ -39,12 +39,6 @@ public class UserDAOImpl implements UserDAO {
                 String email=re.getString("email");
                 String nickname=re.getString("nickname");
                 String phone=re.getString("phone");
-//                System.out.println("uid: "+uid+'\t'+"uname: "+username+'\t'+"password: "+password+'\t'+"email: "+email+'\t'+"nickname"+nickname);
-//                Product product = new Product();
-//                product.setPid(re.getInt("pid"));
-//                product.setPname(re.getString("pname"));
-//                product.setPrice(re.getDouble("price"));
-//                product.setStock(re.getInt("stock"));
                 User user =new User();
                 user.setUid(re.getInt("uid"));
                 user.setUsername(re.getString("username"));

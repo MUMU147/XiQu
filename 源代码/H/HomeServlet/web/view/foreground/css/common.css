@@ -1,13 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  width: 1456px;
+  width: 100%;
+  max-width: 1536px;
   background: url(../images/背景.png);
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -20,7 +23,8 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -49,6 +53,7 @@ span {
   position: relative;
   margin: 0 auto 30px;
   width: 300px;
+  max-width: 100%;
   height: 60px;
 }
 
@@ -75,6 +80,7 @@ span {
 h2 {
   text-align: center;
   width: 300px;
+  max-width: 100%;
   line-height: 60px;
   font-size: 46px;
   color: rgb(148, 69, 70);
@@ -106,15 +112,20 @@ h5 {
 
 .header {
   position: relative;
+  width: 100%;
   height: 798px;
 }
 
 .header .nav {
   padding: 0 45px;
+  width: 100%;
+  max-width: 1456px;
+  margin: 0 auto;
 }
 
 .nav .left img {
   width: 350px;
+  max-width: 25%;
   height: 60px;
   margin: 5px 135px 0 0;
 }
@@ -124,6 +135,7 @@ h5 {
   display: inline-block;
   position: relative;
   width: 400px;
+  max-width: 30%;
   line-height: 68px;
 }
 
@@ -147,6 +159,7 @@ h5 {
 
 .nav .right {
   width: 461px;
+  max-width: 35%;
   text-align: center;
   line-height: 68px;
 }
@@ -159,7 +172,8 @@ h5 {
 /* 导航栏 */
 .header .short {
   z-index: 1;
-  width: 1456px;
+  width: 100%;
+  max-width: 1456px;
   height: 75px;
   margin: 0 auto;
   position: absolute;
@@ -169,11 +183,15 @@ h5 {
 
 .header .short .item {
   line-height: 75px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .header .short .item>li {
   float: left;
   width: 182px;
+  max-width: 14.28%;
   height: 75px;
 }
 
@@ -202,14 +220,18 @@ h5 {
 .banner,
 .banner img {
   position: relative;
-  width: 1456px;
+  width: 100%;
+  max-width: 1456px;
   height: 730px;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 /*版权*/
 .footer {
   clear: both;
-  width: 1456px;
+  width: 100%;
+  max-width: 1456px;
   height: 150px;
   padding-top: 35px;
   margin: 0 auto;
@@ -223,6 +245,7 @@ h5 {
 
 .footer ul {
   width: 400px;
+  max-width: 100%;
   height: 25px;
   margin: 0 auto;
 }
@@ -233,7 +256,7 @@ h5 {
   line-height: 35px;
 }
 
-.footer>ul>li a {
+.footer ul li a {
   width: 100px;
   height: 35px;
   line-height: 35px;
@@ -243,10 +266,11 @@ h5 {
   color: rgba(162, 25, 25, 0.867);
 }
 
-.footer>p {
+.footer p {
   font-size: 16px;
   clear: both;
-  width: 1456px;
+  width: 100%;
+  max-width: 1456px;
   margin: 0 auto;
   text-align: center;
   height: 30px;
